@@ -84,7 +84,7 @@ section {
 .home {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -679,8 +679,14 @@ section {
     .navbar { position: absolute; top: 100%; left: -100%; width: 100%; background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); padding: 20px 0; transition: 0.3s; }
     .navbar.active { left: 0; }
     .navbar a { display: block; margin: 15px 0; text-align: center; font-size: 18px; }
-
-    .home { flex-direction: column; justify-content: center; text-align: center; padding: 100px 5% 0; }
+    section {
+        min-height: auto;
+        padding: 80px 5%;
+    }
+    .about-stats {margin-top: 40px;grid-template-columns: 1fr;}
+    .section-title {margin-bottom: 30px;}
+    .contact {padding: 80px 5%;}
+    .home { flex-direction: column; justify-content: center; text-align: center; padding: 100px 5% 0; min-height: auto;padding-top: 120px; }
     .home-content { align-items: center; text-align: center; }
     .home-content h1 { font-size: 36px; }
     .home-content h3 { font-size: 22px; }
