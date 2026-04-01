@@ -75,7 +75,7 @@ body {
     cursor: pointer;
 }
 section {
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 100px 10%;
     position: relative;
     z-index: 1;
