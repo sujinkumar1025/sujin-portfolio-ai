@@ -242,8 +242,10 @@
                     <p>UI for booking doctor appointments.</p>
                     <span class="tech">React</span>
                     <div class="project-links">
-                        <a href="https://doctor-booking-system-kappa.vercel.app/" target="_blank" rel="noopener noreferrer">Live</a>
-                        <a href="https://github.com/sujinkumar1025/doctor-booking-system" target="_blank" rel="noopener noreferrer">Code</a>
+                        <a href="https://doctor-booking-system-kappa.vercel.app/" target="_blank"
+                            rel="noopener noreferrer">Live</a>
+                        <a href="https://github.com/sujinkumar1025/doctor-booking-system" target="_blank"
+                            rel="noopener noreferrer">Code</a>
                     </div>
                 </div>
             </div>
@@ -259,8 +261,10 @@
                     <p>Responsive tourism UI design.</p>
                     <span class="tech">React</span>
                     <div class="project-links">
-                        <a href="https://sujinkumar1025.github.io/ReactProject/" target="_blank" rel="noopener noreferrer">Live</a>
-                        <a href="https://github.com/sujinkumar1025/ReactProject" target="_blank" rel="noopener noreferrer">Code</a>
+                        <a href="https://sujinkumar1025.github.io/ReactProject/" target="_blank"
+                            rel="noopener noreferrer">Live</a>
+                        <a href="https://github.com/sujinkumar1025/ReactProject" target="_blank"
+                            rel="noopener noreferrer">Code</a>
                     </div>
                 </div>
             </div>
@@ -281,7 +285,8 @@
                     <p>Detects fatigue using EAR.</p>
                     <span class="tech">OpenCV</span>
                     <div class="project-links">
-                        <a href="https://github.com/sujinkumar1025/AI-Based-Eye-Strain-Detection-" target="_blank" rel="noopener noreferrer">Code</a>
+                        <a href="https://github.com/sujinkumar1025/AI-Based-Eye-Strain-Detection-" target="_blank"
+                            rel="noopener noreferrer">Code</a>
                     </div>
                 </div>
             </div>
@@ -313,7 +318,8 @@
                     <p>Predicts user travel preferences using Machine Learning</p>
                     <span class="tech">ML</span>
                     <div class="project-links">
-                        <a href="https://github.com/sujinkumar1025/TravelDestination" target="_blank" rel="noopener noreferrer">Code</a>
+                        <a href="https://github.com/sujinkumar1025/TravelDestination" target="_blank"
+                            rel="noopener noreferrer">Code</a>
                     </div>
                 </div>
             </div>
@@ -478,6 +484,10 @@
 
             input.value = "";
 
+            // Show typing indicator
+            chatBody.innerHTML += `<p id="typing"><i>Bot is typing...</i></p>`;
+            chatBody.scrollTop = chatBody.scrollHeight;
+
             try {
                 const res = await fetch("https://sujin-portfolio-ai.onrender.com/chat", {
                     method: "POST",
@@ -489,13 +499,20 @@
 
                 const data = await res.json();
 
+                // ✅ Remove typing message
+                document.getElementById("typing").remove();
+
                 // Show bot reply
                 chatBody.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
 
                 chatBody.scrollTop = chatBody.scrollHeight;
 
             } catch (err) {
+
+                document.getElementById("typing").remove();
+
                 chatBody.innerHTML += `<p style="color:red;">Error connecting to server</p>`;
+                chatBody.scrollTop = chatBody.scrollHeight;
             }
         }
         function toggleChat() {
