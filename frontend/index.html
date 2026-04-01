@@ -480,7 +480,7 @@
             const chatBody = document.getElementById("chat-body");
 
             // Show user message
-            chatBody.innerHTML += `<p><b>You:</b> ${message}</p>`;
+            chatBody.innerHTML += `<p class="user-msg"><b>You:</b> ${message}</p>`;
 
             input.value = "";
 
@@ -503,7 +503,7 @@
                 document.getElementById("typing").remove();
 
                 // Show bot reply
-                chatBody.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
+                chatBody.innerHTML += `<p class="bot-msg"><b>Bot:</b> ${data.reply}</p>`;
 
                 chatBody.scrollTop = chatBody.scrollHeight;
 

@@ -618,6 +618,19 @@ section {
     font-size: 14px;
 }
 
+#chat-body p{
+    margin:10px 0;
+    line-height:1.4;
+}
+
+.user-msg{
+    color:#ffffff;
+}
+
+.bot-msg{
+    color:#00e6ff;
+}
+
 #chat-input {
     display: flex;
 }
