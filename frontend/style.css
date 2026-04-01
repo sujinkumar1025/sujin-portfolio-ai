@@ -644,6 +644,8 @@ section {
     border-radius: 50%;
     cursor: pointer;
     z-index: 1000;
+    transform: translateX(0);
+
 }
 
 /* Hide chat initially */
@@ -703,18 +705,12 @@ section {
      .section-title {font-size: 28px;text-align: center;}
      .contact-container {grid-template-columns: 1fr;text-align: center;}
      .contact-social {justify-content: center;}
-      #chatbot {
-        width: 92%;
-        right: 4%;
-        bottom: 80px;
-    }
-
-    #chat-toggle {
-        right: 15px;
-        bottom: 20px;
-        padding: 12px;
-        font-size: 20px;
-    }
+     #chat-toggle {
+    right: 12px;
+    bottom: 20px;
+    padding: 12px;
+    font-size: 20px;
+}
 }
 
 
